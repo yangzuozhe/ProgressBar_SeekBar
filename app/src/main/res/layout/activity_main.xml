@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--系统提供的原型进度条-->
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTintMode="add" />
+    <!--进度条-->
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="65"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:progressBackgroundTintMode="add"
+        android:secondaryProgress="@android:integer/config_longAnimTime" />
+    <!--进度条-->
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="5.0dp"
+        android:minHeight="5.0dp"
+        android:progress="60"
+        android:progressDrawable="@drawable/sb_bar" />
+    <!--拖动条-->
+    <SeekBar
+        android:id="@+id/sbSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:maxHeight="5.0dp"
+        android:minHeight="5.0dp"
+        android:progress="60"
+        android:progressDrawable="@drawable/sb_bar"
+        android:secondaryProgress="70"
+        android:thumb="@drawable/sb_thumb" />
+
+    <TextView
+        android:id="@+id/tvSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--评价条-->
+    <RatingBar
+        android:id="@+id/rbStart"
+        style="@style/roomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="3.0"
+        android:stepSize="0.5" />
+
+</LinearLayout>
